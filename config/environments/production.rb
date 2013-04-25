@@ -68,4 +68,14 @@ Omrails::Application.configure do
 
   # In production, :host should be set to the actual host of your application.
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Enable S3 Storage in Production Environment
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['onemonthrails2013'],
+      :access_key_id => ENV['AKIAJVEKERE6ZWIK3IFQ'],
+      :secret_access_key => ENV['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']
+    }
+  }
 end
