@@ -21,3 +21,5 @@ doc/
 .idea
 # Ignore paperclip uploaded files
 /public/system
+# Ignore sampleimages
+/sampleimage
